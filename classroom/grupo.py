@@ -17,19 +17,15 @@ class Grupo:
             if self._asignaturas is None:
                 self._asignaturas = []
             self._asignaturas.append(Asignatura(x))
-            
-    def agregarAlumno(self, alumno, lista=[]):
+
+def agregarAlumno(self, alumno, lista=[]):
         if(lista is None):
             lista.append(alumno)
             self.listadoAlumnos = self.listadoAlumnos + lista
         else:
-            self.listadoAlumnos = [alumno]
+            self.listadoAlumnos = lista + [alumno]
 
-
+    
     @ classmethod
     def asignarNombre(cls, nombre="Grado 6"):
-        cls.grado = nombre
-
-    @ classmethod
-    def asignarNombre(cls, nombre="Grado 4"):
         cls.grado = nombre
